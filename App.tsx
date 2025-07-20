@@ -22,6 +22,12 @@ export default function App() {
 
 // npx @react-native-community/cli init (ファイル名) でプロジェクトを作成
 // npx react-native start ローカルサーバーを立ち上げて実行
-// npx react-native run-android エミュレータを立ち上げてAndroid Studioで実行
+// npx react-native run-android エミュレータを立ち上げてAndroid Studioで実行（ローカルサーバーも立ち上がる）
 // npm install firebase と firebase.jsを作ってfirebaseプロジェクトと接続
-// App.tsxがメインファイルとなる
+
+// React Nativeアプリの実機実装
+// 開発者オプションのUSB経由インストールか、ビルドしたAPKを渡してデバイス側でインストールする
+// JavaScriptのリリースバンドルを作ってから、./Android/gradlew assembleRelease によってAPKをビルドする
+// npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
+// ファイルパスが長すぎるエラー ⇒ C直下等にtmpファイルを作ってプロジェクトをコピーしてAPKをビルドする
+// ヘッダファイル読み込みなどのエラー => npx react-native run-android で一回ランしてみると解決するかも

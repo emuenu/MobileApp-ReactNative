@@ -71,3 +71,8 @@ yarn-error.log
 
 # Firebase configuration information
 firebase.js
+
+# React Native bundle outputs
+android/app/src/main/assets/
+android/app/src/main/res/drawable-*
+android/app/src/main/res/raw/
